@@ -1,0 +1,100 @@
+site_name: shaunmegaw.co.za
+site_url: https://shaunmegaw.co.za/
+repo_url: https://git.shaunmegaw.co.za/rezizter/docs
+edit_uri: _edit/master/docs/
+site_description: Shaun Megaw Docs
+copyright: |
+  Copyright <a href="https://shaunmegaw.co.za/">Shaun Megaw</a>
+nav:
+- Home:
+    - index.md
+    - HomeAutomation:
+        - automation_introduction.md
+        - home_qwikswitch.md
+        - homebridge.md
+        - zoneminder.md 
+    - Linux:
+        - dnsel7.md
+        - xinitd.md
+        - mod_security.md
+    - LetsEncrypt:
+        - letsencrypt.md
+    - ZeroTier:
+        - zerotier_client.md
+        - zerotier_server.md
+        - zerotier_admin.md
+    - Mumble:
+        - mumble_client.md
+        - murmur_server.md
+    - MacApps:
+        - macapps.md
+    - Percona:
+       - percona_change_dir.md
+    - Cars:
+       - bimmercode.md
+       - mmi.md
+    - Electrical:
+       - ups_speaker.md
+    - Networking:
+       - dwa_582.md
+    - Notes:
+       - spacemacs.md
+       - markdown.md
+       - youtube-dl.md
+  icon:
+    logo: 'images/logo_white.svg'
+  palette:
+    primary: 'blue'
+    accent: 'yellow'
+  font:
+    text: Roboto
+    code: Roboto Mono
+  feature:
+    tabs: true
+  static_templates:
+    - 404.html
+  custom_dir: 'theme'
+markdown_extensions:
+    - extra
+    - toc:
+          permalink: '#'
+    - pymdownx.caret
+    - pymdownx.tilde
+    - pymdownx.mark
+    - admonition
+    - pymdownx.details
+    - codehilite:
+          guess_lang: false
+          linenums: false
+    - pymdownx.inlinehilite
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.emoji:
+          emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.keys
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - markdown_blockdiag:
+          format: svg
+    - markdown_include.include
+    - fontawesome_markdown
+extra:
+  social:
+    - type: book
+      link: https://shaunmegaw.co.za/
+    - icon: fontawesome/brands/github-alt
+      link: https://git.shaunmegaw.co.za/
+
+extra_css:
+  - https://unpkg.com/mermaid@8.4.0/dist/mermaid.css
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js
+
