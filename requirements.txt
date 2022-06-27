@@ -1,0 +1,12 @@
+mkdocs
+mkdocs-material
+markdown
+pymdown-extensions
+markdown-blockdiag
+markdown-include
+mkdocs-pdf-export-plugin
+git+https://github.com/bmcorser/fontawesome-markdown
+mkpdfs-mkdocs
+WeasyPrint
+git+https://github.com/zhaoterryy/mkdocs-pdf-export-plugin.git@master
+fontawesome_markdown
