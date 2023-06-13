@@ -1,0 +1,124 @@
+site_name: megaw.co.za
+site_url: https://megaw.co.za/
+repo_url: https://github.com/rezizter/docs
+edit_uri: _edit/master/docs/
+site_description: Shaun Megaw Docs
+copyright: Copyright <a href="https://megaw.co.za/">Shaun Megaw</a>
+nav:
+- Home:
+    - index.md
+    - HomeAutomation:
+        - automation_introduction.md
+        - home_qwikswitch.md
+        - homebridge.md
+        - zoneminder.md 
+    - Ansible:
+        - ansible_errors.md
+    - Linux:
+        - dnsel7.md
+        - xinitd.md
+        - mod_security.md
+        - postfix.md
+        - apache_harden.md
+    - LetsEncrypt:
+        - letsencrypt.md
+    - ZeroTier:
+        - zerotier_client.md
+        - zerotier_server.md
+        - zerotier_admin.md
+    - Mumble:
+        - mumble_client.md
+        - murmur_server.md
+    - MacApps:
+        - macapps.md
+    - Percona:
+       - percona_change_dir.md
+    - Cars:
+       - bimmercode.md
+       - mmi.md
+    - Electrical:
+       - ups_speaker.md
+    - Networking:
+       - dwa_582.md
+    - Physical Servers:
+       - dell_sweet32.md
+       - hp_sweet32.md
+       - hp_weak_hashing.md
+    - Notes:
+       - spacemacs.md
+       - markdown.md
+       - youtube-dl.md
+       - yt-dlp.md
+       - pdfcrack.md
+       - mac_ssh.md
+theme:
+  name: material
+  font:
+    text: 'Source Sans Pro'
+    code: 'Roboto Mono'
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate  # dark
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+  static_templates:
+    - 404.html
+  icon:
+    logo: fontawesome/solid/book-open-reader
+    repo: fontawesome/brands/git-alt
+  custom_dir: overrides
+plugins:
+  - search
+markdown_extensions:
+    - extra
+    - toc:
+          permalink: '#'
+    - pymdownx.caret
+    - pymdownx.tilde
+    - pymdownx.mark
+    - admonition
+    - pymdownx.details
+    - pymdownx.tabbed
+    - codehilite:
+          guess_lang: false
+          linenums: false
+    - pymdownx.inlinehilite
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        # emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.keys
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist:
+          custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/solid/book-open-reader
+      link: https://megaw.co.za/
+    - icon: fontawesome/brands/git-square
+      link: https://github.com/rezizter/docs
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.2/dist/mermaid.min.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  analytics:
+    provider: google
+    property: G-JPZXTPCPEE
