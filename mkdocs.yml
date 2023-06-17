@@ -116,9 +116,6 @@ extra:
 extra_javascript:
   - https://unpkg.com/mermaid@8.5.2/dist/mermaid.min.js
 
-extra_css:
-  - stylesheets/extra.css
-
 extra:
   analytics:
     provider: google
