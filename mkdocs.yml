@@ -20,6 +20,7 @@ nav:
         - mod_security.md
         - postfix.md
         - apache_harden.md
+        - pagespeed_apache.md
     - LetsEncrypt:
         - letsencrypt.md
     - ZeroTier:
