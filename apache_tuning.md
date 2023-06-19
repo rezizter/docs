@@ -20,13 +20,17 @@ vi /etc/httpd/conf/httpd.conf
     
 ```bash
 #Set caching on image files for 11 months
-<filesMatch "\.(ico|gif|jpg|png|txt|html)$">
+<filesMatch "\.(ico|json|gif|jpg|png|txt|html)$">
   SetOutputFilter DEFLATE
   ExpiresActive On
   ExpiresDefault "access plus 11 month"
   Header append Cache-Control "public"
 </filesMatch>
-vi /etc/httpd/conf/httpd.conf
+<filesMatch "\.(css|js)$">
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  Header append Cache-Control "public"
+</filesMatch>
 ```
 
 Now restart apache to apply the settings
