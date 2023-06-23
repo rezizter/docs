@@ -35,6 +35,8 @@ nav:
         - macapps.md
     - Percona:
        - percona_change_dir.md
+    - Games:
+       - redalert_2_mac.md
     - Cars:
        - bimmercode.md
        - mmi.md
