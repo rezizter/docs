@@ -4,7 +4,7 @@
 
 I play Red Alert 2, and have been strugglin g to get it working on recent versions of wine. I use a modified version of openra to play, which I found was great at giving me the added bonus of a "remastered" feel to the game.
 
-![image](./img/ra2_ubuntu.svg){: style="width:150:px"}
+![image](./img/ra2_ubuntu.png){: style="width:150:px"}
 
 ## Install
 
