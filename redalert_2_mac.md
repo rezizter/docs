@@ -10,14 +10,21 @@ I play Red Alert 2, and have been struggling to get it working on a mac with win
 
 Install dotnet 6:
 
+!!! warning
+    You cant use dotnet from homebrew, you have to use the Microsoft version.
+
+!!! note
+    Get the latest version from here: https://dotnet.microsoft.com/en-us/download
+
 ```bash
-brew install dotnet@6
+wget "https://download.visualstudio.microsoft.com/download/pr/a91e812a-f286-4b1b-b050-f9612c4f5ec9/dd24f826e0c99945066987df1f7ec790/dotnet-sdk-6.0.411-osx-x64.pkg"
+open dotnet-sdk-6.*
 ```
 
 Now link the binary to your environment
 
 ```bash
-sudo ln -s /opt/homebrew/opt/dotnet@6/bin/dotnet /usr/local/bin/dotnet
+sudo ln -sf /usr/local/share/dotnet/x64/dotnet /usr/local/bin/
 ```
 
 Install packages
