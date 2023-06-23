@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I play Red Alert 2, and have been struggling to get it working on recent versions of wine. I use a modified version of openra to play, which I found was great at giving me the added bonus of a "remastered" feel to the game.
+I play Red Alert 2, and have been struggling to get it working on a mac with wine since they dropped support for 32 bit apps. I use a modified version of openra to play, which I found was great at giving me the added bonus of a "remastered" feel to the game.
 
 ![image](./img/ra2_ubuntu.png){: style="width:150:px"}
 
@@ -43,6 +43,9 @@ mkdir ~/Library/Application\ Support/OpenRA/Content/ra2
 ```
 
 Copy the game files
+
+!!! note
+    Replace ~/Games/RedAlert2/ with the location of your RA2 files.
 
 ```bash
 cp -r ~/Games/RedAlert2/* ~/Library/Application\ Support/OpenRA/Content/ra2/
