@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I play Red Alert 2, and have been strugglin g to get it working on recent versions of wine. I use a modified version of openra to play, which I found was great at giving me the added bonus of a "remastered" feel to the game.
+I play Red Alert 2, and have been struggling to get it working on recent versions of wine. I use a modified version of openra to play, which I found was great at giving me the added bonus of a "remastered" feel to the game.
 
 ![image](./img/ra2_ubuntu.png){: style="width:150:px"}
 
@@ -20,13 +20,13 @@ rm packages-microsoft-prod.deb
 
 ```
 
-Now install dotnet 6
+Now install dotnet 6:
 
 ```bash
-sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-6.0
+sudo apt-get update && sudo apt-get install -y dotnet-sdk-6.0
 ```
 
-Now download OpenRA with the ra2 mod
+Now download OpenRA with the ra2 mod:
 
 ```bash
 cd ~
@@ -36,7 +36,7 @@ cd ra2-master
 make all
 ```
 
-Create the game directory
+Create the game directory:
 
 ```bash
 mkdir -p ~/.config/openra/Content/ra2
@@ -53,5 +53,3 @@ Launch the game with
 ```bash
 ./launch-game.sh
 ```
-
-
