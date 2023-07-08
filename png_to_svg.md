@@ -1,4 +1,4 @@
-# Convert png to sng on Mac M1
+# Convert png to svg on Mac M1
 
 ## Introduction
 
