@@ -1,7 +1,7 @@
 site_name: megaw.co.za
 site_url: https://megaw.co.za/
 repo_url: https://github.com/rezizter/docs
-edit_uri: _edit/master/docs/
+edit_uri: edit/main/
 site_description: Shaun Megaw Docs
 copyright: Copyright <a href="https://megaw.co.za/">Shaun Megaw</a>
 nav:
