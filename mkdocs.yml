@@ -14,6 +14,8 @@ nav:
         - zoneminder.md 
     - Ansible:
         - ansible_errors.md
+        - molecule.md
+        - moleculee_errors.md
     - Linux:
         - dnsel7.md
         - xinitd.md
@@ -33,6 +35,7 @@ nav:
         - murmur_server.md
     - MacApps:
         - macapps.md
+        - macsed.md
     - Percona:
        - percona_change_dir.md
     - Games:
