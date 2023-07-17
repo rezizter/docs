@@ -15,7 +15,7 @@ nav:
     - Ansible:
         - ansible_errors.md
         - molecule.md
-        - moleculee_errors.md
+        - molecule_errors.md
     - Linux:
         - dnsel7.md
         - xinitd.md
