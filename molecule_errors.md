@@ -1,5 +1,12 @@
 # Errors when running molecule
 
+## Skip molecule error using tags
+
+Add the molecule-notest to your test in your role:
+
+```bash
+  tags: molecule-notest
+```
 ## systemd error on Centos7
 
 !!! warning
