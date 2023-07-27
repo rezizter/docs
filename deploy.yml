@@ -1,0 +1,4 @@
+---
+- name: Run SSH command
+  uses: garygrossgarten/github-action-ssh@0.7.0
+
