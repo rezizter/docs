@@ -11,15 +11,40 @@ and found GitHub Actions was good for this.
 
 ### SSH Keys
 Generate ssh keys.
-
 ```bash
 ssh-keygen -b 4096
 ```
 
 Add the public key to your servers authorized_keys
-
 ```bash
 vi .ssh/authorized_keys
+```
+
+### Create Deploy script
+Create a deploy script on your server that hosts your mkdocs install.
+```bash
+mkdir /opt/scripts
+vi /opt/scripts/build_site.sh
+```
+!!! note
+    Replace the venv with your path.
+Add
+```bash
+#!/bin/bash
+
+source ~/.cache/venv/mobile-sre-docs-3.8/bin/activate
+cd /var/www/html/docs/docs
+LC_ALL=en_US
+export LC_ALL
+git pull
+cd /var/www/html/docs/
+mkdocs build --clean
+exit 0
+```
+
+Make it executable:
+```bash
+chmod +x /opt/scripts/build_site.sh
 ```
 
 ### Setup Secrets
