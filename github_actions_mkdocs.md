@@ -63,10 +63,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via OPEN SSH Private Key
+      - name: Deploy mkdocs to a remote server
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: ls -a
+          command: /opt/scripts/build_site.sh
           host: ${{ secrets.HOST }}
           username: root
           privateKey: ${{ secrets.PRIVATE_KEY}}
