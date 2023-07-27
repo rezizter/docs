@@ -61,14 +61,14 @@ Click on "New repository secrets"
 
 Create a HOST secret:
 
-Name: HOST
-Secret: your server name or ip:
+* Name: HOST
+* Secret: your server name or ip:
 ![image](./img/actions3.png){: style="width:80:px"}
 
 Now create a PRIVATE_KEY secret:
 
-Name: PRIVATE_KEY
-Secret: copy in your ssh private key
+* Name: PRIVATE_KEY
+* Secret: copy in your ssh private key
 ![image](./img/actions4.png){: style="width:80:px"}
 
 ### Setup Action
