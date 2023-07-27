@@ -2,6 +2,9 @@ name: Deploy mkdocs via ssh
 
 on: push
 
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
 jobs:
   build:
     runs-on: ubuntu-latest
