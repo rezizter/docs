@@ -9,15 +9,48 @@ and found GitHub Actions was good for this.
 
 ## Setup
 
-Create the workflow folder in your project
+### SSH Keys
+Generate ssh keys.
+
 ```bash
-mkdir -p .github/workflow
+ssh-keygen -b 4096
 ```
 
-Now create a deploy file
+Add the public key to your servers authorized_keys
+
 ```bash
-vi .github/workflow/deploy.yml
+vi .ssh/authorized_keys
 ```
+
+### Setup Secrets
+On the Github site you need to setup your secrets.
+Go to:
+
+!!! note
+    https://github.com/USERNAME/REPO/settings/secrets
+    
+Replace USERNAME/REPO with your repo username.
+
+Click on "New repository secrets"
+![image](./img/actions2.png){: style="width:80:px"}
+
+Create a HOST secret:
+
+Name: HOST
+Secret: your server name or ip:
+![image](./img/actions3.png){: style="width:80:px"}
+
+Now create a PRIVATE_KEY secret:
+
+Name: PRIVATE_KEY
+Secret: copy in your ssh private key
+![image](./img/actions4.png){: style="width:80:px"}
+
+### Setup Action
+Now go to your project on Github
+
+Click on Actions >  set up a workflow yourself
+![image](./img/actions1.png){: style="width:80:px"}
 
 Add the following:
 ```bash
@@ -40,13 +73,7 @@ jobs:
         env:
           CI: true
 ```
-
-Now go to your project on Github
-
-Click on Actions >  set up a workflow yourself
-
-
-![image](./img/actions1.png){: style="width:80:px"}
+![image](./img/actions5.png){: style="width:80:px"}
 
 
 
