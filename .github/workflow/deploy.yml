@@ -1,4 +1,20 @@
----
-- name: Run SSH command
-  uses: garygrossgarten/github-action-ssh@0.7.0
+name: Deploy mkdocs via ssh
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ls -a via OPEN SSH Private Key
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: ${{ secrets.HOST }}
+          username: root
+          privateKey: ${{ secrets.PRIVATE_KEY}}
+        env:
+          CI: true
+```
 
