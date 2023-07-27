@@ -99,6 +99,8 @@ jobs:
         env:
           CI: true
 ```
+
+Once added commit changes:
 ![image](./img/actions5.png){: style="width:80:px"}
 
 Your build will now show up in the "Actions" menu
