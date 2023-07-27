@@ -79,6 +79,7 @@ Click on Actions >  set up a workflow yourself
 
 Add the following:
 ```bash
+---
 name: Deploy mkdocs via ssh
 
 on: push
