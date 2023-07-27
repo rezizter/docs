@@ -24,6 +24,7 @@ nav:
         - apache_harden.md
         - apache_tuning.md
         - pagespeed_apache.md
+        - github_actions_mkdocs.md
     - LetsEncrypt:
         - letsencrypt.md
     - ZeroTier:
