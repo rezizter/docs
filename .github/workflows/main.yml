@@ -1,3 +1,4 @@
+---
 name: Deploy mkdocs via ssh
 
 on: push
