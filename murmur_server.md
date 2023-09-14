@@ -139,5 +139,3 @@ Restart murmur to apply
 systemctl restart murmur.service
 systemctl enable murmur.service
 ```
-!!! note
-    Hi Zen
