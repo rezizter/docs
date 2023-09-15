@@ -48,16 +48,20 @@ Reload with
 <kbd>Space</kbd>+ f e R
 
 ## Edit Multiple Lines At Once
-Lets say you need to add 2 spaces in front of many lines
+Lets say you need to add 2 spaces in front of many lines:
+
 <kbd>ctrl</kbd>+ v
 
 Move your cursor up or down over the lines you want to add the double spacing to.
+
 <kbd>shift</kbd>+ i
 
 Hit the space bar twice:
+
 <kbd>Space</kbd>+<kbd>Space</kbd>
 
 Press Escape to apply
+
 <kbd>esc</kbd>
 
 ## Search and Replace
