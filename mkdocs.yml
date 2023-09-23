@@ -13,6 +13,7 @@ nav:
           - home_qwikswitch.md
           - homebridge.md
           - zoneminder.md
+          - ezviz_homebridge.md
       - Ansible:
           - ansible_errors.md
           - molecule.md
