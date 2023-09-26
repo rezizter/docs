@@ -8,10 +8,10 @@ so that it can be viewed in Apple Home.
 ## Enable RTSP on EZVIZ
 
 Open the EZVIZ app on your phone and click on the profile button:
-![image](./img/ezviz_2.png){: style="width:80:px"}
+![image](./img/ezviz_22.png){: style="width:80:px"}
 
 Tap on "Settings":
-![image](./img/ezviz_3.png){: style="width:80:px"}
+![image](./img/ezviz_33.png){: style="width:80:px"}
 
 Tap on "LAN Live View":
 ![image](./img/ezviz_4.png){: style="width:80:px"}
