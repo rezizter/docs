@@ -87,7 +87,7 @@ meta/main.yml
 Add:
 ```bash
 galaxy_info:
-  role_name: rezizter.ansible_loki
+  role_name: <ROLE_NAME>
   description:
   license: <YOUR LICENSE>
 
