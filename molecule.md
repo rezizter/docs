@@ -79,6 +79,30 @@ verifier:
   name: ansible
 ```
 
+Create a meta file which references your role:
+```bash
+meta/main.yml
+```
+
+Add:
+```bash
+galaxy_info:
+  role_name: rezizter.ansible_loki
+  description:
+  license: <YOUR LICENSE>
+
+  min_ansible_version: 2.8
+
+  platforms:
+    - name: el
+      versions:
+        - 7
+        - 8
+  galaxy_tags:
+    - logging
+dependencies: []
+```
+
 Now create the converge file:
 ```bash
 vi molecule/default/converge.yml
