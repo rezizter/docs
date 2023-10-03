@@ -44,6 +44,7 @@ nav:
       - Games:
           - redalert_2_mac.md
           - redalert_2_ubuntu.md
+          - redalert_2_not_loading_wine.md
       - Cars:
           - bimmercode.md
           - mmi.md
