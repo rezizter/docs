@@ -13,10 +13,12 @@ open your terminal and type in:
 ```bash
 winecfg
 ```
-Click on "Libraries" and in New overrides for library type in "ddraw" and then click on Add
+Click on "Libraries" and in New overrides for library type in "ddraw" and then click on Add:
+
 ![image](./img/ra2_noload_1.png){: style="width:80:px"}
 
-You will get a warning click on "Yes"
+You will get a warning click on "Yes":
+
 ![image](./img/ra2_noload_2.png){: style="width:80:px"}
 
 Click on Apply and then ok. You can now launch the game.
