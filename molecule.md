@@ -68,15 +68,14 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: centos-8
-    image: quay.io/centos/centos:stream8
-    pre_build_image: true
-    command: /usr/sbin/init
+  - name: instance
+    image: geerlingguy/docker-centos8-ansible:latest
+    command: /sbin/init
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+    cgroupns_mode: host
     privileged: true
-provisioner:
-  name: ansible
-verifier:
-  name: ansible
+    pre_build_image: true
 ```
 
 Create a meta file which references your role:
