@@ -112,7 +112,7 @@ systemctl enable murmur.service
 # Adding SSL
 ## Setup letsencrypt
 
-[Install LEtsEncrypt](../letsencrypt/)
+[Install LEtsEncrypt](./letsencrypt.md)
 
 Now add the certificates to murmur
 

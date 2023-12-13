@@ -3,7 +3,7 @@
 ## Introduction
 
 We now have our QwikSwitch devices installed and setup, as per this document:
-[Install QwikSwitch Hardware](../home_qwikswitch/)
+[Install QwikSwitch Hardware](./home_qwikswitch.md)
 
 We will go through the steps of setting up each QwikSwitch relay to homebridge, so that we can contol our devices via Apple HomeKit.
 
