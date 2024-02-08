@@ -41,4 +41,4 @@ Now run the script:
 
 ## Conclusion
 
-Let this script run. It will take a few goes to reveal the password.
+Let this script run. It will take a few hours to reveal the password.
