@@ -29,6 +29,8 @@ nav:
           - github_actions_mkdocs.md
       - LetsEncrypt:
           - letsencrypt.md
+      - Security:
+          - hikvision_bruteforce.md
       - ZeroTier:
           - zerotier_client.md
           - zerotier_server.md
