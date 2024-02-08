@@ -1,4 +1,4 @@
-# Brute force the admin password for a HIKVision dvr
+# Brute force the admin password for a HIKVision DVR
 ![image](./img/hik_brute1.png){: style="width:80:px"}
 
 ## Introduction
@@ -38,3 +38,7 @@ Now run the script:
 ```bash
 ./skavngr.rb
 ```
+
+## Conclusion
+
+Let this script run. It will take a few goes to reveal the password.
