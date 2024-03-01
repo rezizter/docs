@@ -48,6 +48,9 @@ nav:
           - redalert_2_ubuntu.md
           - redalert_2_not_loading_wine.md
           - civ_wine_error.md
+      - Voip:
+          - sip_sipvicious.md
+          - secure_asterisk.md
       - Cars:
           - bimmercode.md
           - mmi.md
