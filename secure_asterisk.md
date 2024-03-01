@@ -5,7 +5,7 @@
 ## Change the user agent
 
 Changing the User agent means that the attacker will
-user the incorect scripts to attack your system.
+use the incorrect scripts to attack your system.
 
 Open your pjsip.conf file
 

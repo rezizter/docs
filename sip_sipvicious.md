@@ -1,7 +1,7 @@
 # Sipvicious
 
 ## Introduction
-Sipvicious is used to scan for a pbx and try to attack it.
+Sipvicious is used to scan for a pbx and to attack it.
 We will go through the steps of installing sipvicious on Ubuntu and using it.
 The purpose of this is to secure your asterisk installation.
 
