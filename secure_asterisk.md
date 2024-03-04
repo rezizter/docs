@@ -70,7 +70,7 @@ Add the following:
 ```bash
 #!/bin/bash
 
-grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | grep -v " 192.168.0." | uniq > /tmp/lock.txt
+grep "Failed to authenticate\|No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | grep -v " 192.168.0." | uniq > /tmp/lock.txt
 
 for x in $(cat /tmp/lock.txt)
 do
