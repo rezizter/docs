@@ -70,17 +70,20 @@ Add the following:
 ```bash
 #!/bin/bash
 
-grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | grep -v "102.182" | uniq > /tmp/lock.txt
-grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "102.182" | grep -v "callid" | uniq >> /tmp/lock.txt
+grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0.\|callid" | uniq > /tmp/lock.txt
+grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f13,14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "192.168.0.\|callid" | uniq >> /tmp/lock.txt
 
 for x in $(cat /tmp/lock.txt)
 do
-    iptables -A INPUT -s $x -p tcp --dport 5060 -j DROP -m state --state NEW,ESTABLISHED,RELATED
-    iptables -A INPUT -s $x -p udp --dport 5060 -j DROP -m state --state NEW,ESTABLISHED,RELATED
+    iptables -A INPUT -s $x -p tcp --dport 5060 -j DROP
+    iptables -A INPUT -s $x -p udp --dport 5060 -j DROP
 done
 
 # Clear the log
 > /var/log/asterisk/messages
+
+# Reload
+asterisk -rx "core reload"
 ```
 
 Set the permissions:
@@ -96,5 +99,6 @@ crontab -e
 Add:
 
 ```bash
-* * * * * /opt/scripts/sip_lock.sh
+10 20 * * * /opt/scripts/sip_lock.sh
+10 04 * * * /opt/scripts/sip_lock.sh
 ```
