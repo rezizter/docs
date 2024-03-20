@@ -70,35 +70,44 @@ Add the following:
 ```bash
 #!/bin/bash
 
-grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0.\|callid" | uniq > /tmp/lock.txt
-grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f13,14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "192.168.0.\|callid" | uniq >> /tmp/lock.txt
+grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0.\|callid" | uniq > /tmp/brute.txt
+grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f13,14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "192.168.0.\|callid" | uniq >> /tmp/brute.txt
 
-for x in $(cat /tmp/lock.txt)
-do
-    iptables -A INPUT -s $x -p tcp --dport 5060 -j DROP
-    iptables -A INPUT -s $x -p udp --dport 5060 -j DROP
+for address in `grep -v -f /tmp/applied_brute.txt < /tmp/brute.txt`; do
+    echo $address >> /tmp/applied_brute.txt
+    if ! grep -q -F -x $address /tmp/exclude_ipaddress.txt; then
+        IPTABLE="/sbin/iptables -A INPUT -s "$address" -j DROP"
+        echo $IPTABLE
+        $IPTABLE
+    fi
 done
 
-# Clear the log
-> /var/log/asterisk/messages
+unset address
+unset IPTABLE
+```
 
-# Reload
-asterisk -rx "core reload"
+Create files
+```
+touch /tmp/brute.txt
+touch /tmp/applied_brute.txt
+touch /tmp/exclude_ipaddress.txt
+```
+
+list of ip addresses you want to exclude from being blocked
+```
+vi /tmp/exclude_ipaddress.txt
 ```
 
 Set the permissions:
-
 ```bash
 chmod +x /opt/scripts/sip_lock.sh
 ```
 Now add the script to cron
-
 ```
 crontab -e
 ```
 Add:
 
 ```bash
-10 20 * * * /opt/scripts/sip_lock.sh
-10 04 * * * /opt/scripts/sip_lock.sh
+0 * * * * /opt/scripts/sip_lock.sh
 ```
