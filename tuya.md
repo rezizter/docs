@@ -56,3 +56,12 @@ sudo npm i @tuyapi/cli -g
 tuya-cli wizard
 ```
 ![image](./img/tuya5.png){: style="width:80:px"}
+
+## Add to homebridge
+
+Click on Plugins and search for "homebridge-tuya" and then install
+![image](./img/tuya6.png){: style="width:80:px"}
+
+Once installed, select "Smart Plug / Barely smart power strip from the dropdown.
+Add in the "Name", "Tuya ID" and "Tuya Key" which you got from the "tuya-cli wizard" output above.
+![image](./img/tuya7.png){: style="width:80:px"}
