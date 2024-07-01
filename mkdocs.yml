@@ -14,6 +14,7 @@ nav:
           - homebridge.md
           - zoneminder.md
           - ezviz_homebridge.md
+          - tuya.md
       - Ansible:
           - ansible_errors.md
           - molecule.md
