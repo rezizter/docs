@@ -1,4 +1,4 @@
-# Configure Tuya the tuya smart switch to run locally and connect it to homebridge.
+# Configure a Tuya smart switch to run locally and connect it to homebridge.
 
 ## Introduction
 
