@@ -27,7 +27,7 @@ Now if someone scans your system the output will be as follows:
 +----------------------+----------------------+-------------+
 | SIP Device           | User Agent           | Fingerprint |
 +======================+======================+=============+
-| 102.145.163.239:5060 | MicrosoftXP/IOS-12.x | disabled    |
+| 192.168.0.239:5060   | MicrosoftXP/IOS-12.x | disabled    |
 +----------------------+----------------------+-------------+
 ```
 
@@ -70,8 +70,9 @@ Add the following:
 ```bash
 #!/bin/bash
 
-grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0.\|callid" | uniq > /tmp/brute.txt
-grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f13,14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "192.168.0.\|callid" | uniq >> /tmp/brute.txt
+grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0\|callid\|)" | uniq > /tmp/brute.txt
+grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f12 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0\|callid\|for\|failed" | uniq >> /tmp/brute.txt
+grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f13,14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "192.168.0\|callid" | uniq >> /tmp/brute.txt
 
 for address in `grep -v -f /tmp/applied_brute.txt < /tmp/brute.txt`; do
     echo $address >> /tmp/applied_brute.txt
