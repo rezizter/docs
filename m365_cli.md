@@ -1,4 +1,4 @@
-# Authenticate without a browser
+# M365-cli: Authenticate without a browser
 
 ## Introduction
 
