@@ -17,8 +17,7 @@ Install npm using:
 npm install -g @pnp/cli-microsoft365
 ```
 Run the following command
-
-```/bash
+```bash
 /usr/local/bin/m365 setup --debug
 ```
 
