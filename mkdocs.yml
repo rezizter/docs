@@ -29,6 +29,7 @@ nav:
           - pagespeed_apache.md
           - github_actions_mkdocs.md
           - m365_cli.md
+          - m365_cli_usage.md
       - LetsEncrypt:
           - letsencrypt.md
       - Security:
