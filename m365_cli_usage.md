@@ -82,6 +82,19 @@ Now type in the groups name
 m365 entra m365group user add --groupId 100000aa-ea12-4b123-9a123-f1111111 --userNames "yourname.yoursurname@yourdomain.com" --role member
 ```
 
+# Batch add users to a Teams group via csv
+
+These instructions are for batch adding users from a csv file to your teams group on a Linux machine
+
+Install powershell on hyour Linux box
+
+!!! note
+    This is for a Red hat based server
+
+```bash
+dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.5.1/powershell-7.5.1-1.rh.x86_64.rpm
+```
+
 ## View the group in Microsoft Teams
 Open teams, click on the chats and scroll to the bottom.
 Click on "See all your teams"
