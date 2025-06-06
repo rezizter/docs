@@ -101,11 +101,13 @@ vi teams.csv
 ```
 
 !!! note
-    include the header UPN,teamName,teamId,role
+    Include the header UPN,teamName,teamId,role
 
 !!! warning
     UPN,teamName,teamId,role
+
     name1.surname1@yourdomain.com,Teams_name,100000aa-ea12-4b123-9a123-f1111111,owner
+
     name2.surname2@yourdomain.com,Teams_name,100000aa-ea12-4b123-9a123-f1111111,member
 
 Now create a MicroSoft BAT script:
