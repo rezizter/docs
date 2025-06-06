@@ -95,6 +95,50 @@ Install powershell on hyour Linux box
 dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.5.1/powershell-7.5.1-1.rh.x86_64.rpm
 ```
 
+Create a csv file with the following details:
+
+```bash
+vi teams.csv
+```
+
+!!! note
+    include the header UPN,teamName,teamId,role
+
+!!! warning
+    UPN,teamName,teamId,role
+    name1.surname1@yourdomain.com,Teams_name,100000aa-ea12-4b123-9a123-f1111111,owner
+    name2.surname2@yourdomain.com,Teams_name,100000aa-ea12-4b123-9a123-f1111111,member
+
+Now create a MicroSoft BAT script:
+```bash
+vi script.bat
+```
+
+Add
+!!! note
+    Make sure the location of your csv file is referenced.
+```bash
+#Check if connected to M365
+$m365Status = /usr/local/bin/m365 status --output text
+if ($m365Status -eq "Logged Out") {
+  /usr/local/bin/m365 login
+}
+
+#Import csv
+$usersCsvFile = Import-Csv -Path "/root/teams.csv"
+
+#Add users to the Team
+foreach ($row in $usersCsvFile) {
+  Write-Host "Adding $($row.UPN) to the $($row.teamName) Team" -ForegroundColor Magenta
+  /usr/local/bin/m365 entra m365group user add --groupId $row.teamId --userNames "$($row.UPN)" --role $row.role
+}
+```
+
+Now run the script to to add the users from your csv file to your teams group:
+```bash
+pwsh script.bat
+```
+
 ## View the group in Microsoft Teams
 Open teams, click on the chats and scroll to the bottom.
 Click on "See all your teams"
