@@ -45,7 +45,7 @@ You will be prompted to reboot
 
 Once rebooted you will be able to mount the disk with:
 ```bash
-sudo ./ext4fuse /dev/disk5s1 ~/ext4_mount -o allow_other
+sudo ./ext4fuse /dev/disk4s1 ~/ext4_mount -o allow_other
 ```
 
 To unmount when done run:
