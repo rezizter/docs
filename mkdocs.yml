@@ -73,6 +73,7 @@ nav:
           - pdfcrack.md
           - mac_ssh.md
           - png_to_svg.md
+          - ext4macos.md
 theme:
   name: material
   font:
