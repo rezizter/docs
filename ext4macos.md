@@ -43,7 +43,7 @@ Click on "Enable System Extentions..."
 You will be prompted to reboot
 ![image](./img/mountext4_4.png){: style="width:80:px"}
 
-Once rebooted ou will be able tomount the disk with:
+Once rebooted you will be able to mount the disk with:
 ```bash
 sudo ./ext4fuse /dev/disk5s1 ~/ext4_mount -o allow_other
 ```
