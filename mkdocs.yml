@@ -54,6 +54,7 @@ nav:
       - Voip:
           - sip_sipvicious.md
           - secure_asterisk.md
+          - freepbx_https.md
       - Cars:
           - bimmercode.md
           - mmi.md
