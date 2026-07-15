@@ -5,6 +5,6 @@ pymdown-extensions==10.5
 markdown-blockdiag==0.8.0
 markdown-include==0.6.0
 mkdocs-with-pdf==0.9.3
-wheel==0.42.0
+wheel==0.46.2
 mkdocs-redirects==1.0.4
 Jinja2 == 3.1.4
