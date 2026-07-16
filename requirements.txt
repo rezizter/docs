@@ -1,7 +1,7 @@
 mkdocs==1.5.3
 mkdocs-material==9.5.2
 markdown==3.8.1
-pymdown-extensions==10.5
+pymdown-extensions==10.21.3
 markdown-blockdiag==0.8.0
 markdown-include==0.6.0
 mkdocs-with-pdf==0.9.3
