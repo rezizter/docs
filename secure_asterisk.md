@@ -70,9 +70,7 @@ Add the following:
 ```bash
 #!/bin/bash
 
-grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f14 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0\|callid\|)" | uniq > /tmp/brute.txt
-grep "Failed to authenticate"  /var/log/asterisk/messages | cut -d ' ' -f12 | sed 's/:5060//g' | sed "s/'//g" | cut -d ':' -f1 | grep -v "192.168.0\|callid\|for\|failed" | uniq >> /tmp/brute.txt
-grep "No matching endpoint found"  /var/log/asterisk/messages | cut -d ' ' -f13,14 | cut -d ':' -f1 | sed "s/'//g" | grep -v "192.168.0\|callid" | uniq >> /tmp/brute.txt
+grep "Failed to authenticate" /var/log/asterisk/full | cut -d ' ' -f11 | cut -d ':' -f1 | sed "s/'//g" | sort | uniq | grep -v "for\|102.135.163.249" > /tmp/brute.txt
 
 for address in `grep -v -f /tmp/applied_brute.txt < /tmp/brute.txt`; do
     echo $address >> /tmp/applied_brute.txt
