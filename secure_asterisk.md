@@ -70,6 +70,8 @@ Add the following:
 ```bash
 #!/bin/bash
 
+touch /tmp/applied_brute.txt
+touch /tmp/exclude_ipaddress.txt
 grep "Failed to authenticate" /var/log/asterisk/full | cut -d ' ' -f11 | cut -d ':' -f1 | sed "s/'//g" | sort | uniq | grep -v "for\|102.135.163.249" > /tmp/brute.txt
 
 for address in `grep -v -f /tmp/applied_brute.txt < /tmp/brute.txt`; do
