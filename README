@@ -15,6 +15,7 @@ apt install python3-pip git apache2 python3.11-venv
 mkdir /var/www/html/docs
 cd /var/www/html/docs/
 git clone https://github.com/rezizter/docs.git
+mkdir /var/www/html/docs/overrides
 ln -sf docs/mkdocs.yml mkdocs.yml
 cd docs
 python -m venv ~/.cache/venv/python
@@ -27,5 +28,33 @@ chmod +x /opt/scripts/build_site.sh
 Now build the site
 ```
 /opt/scripts/build_site.sh
+```
+
+# Apache config
+
+```
+<VirtualHost *:80>
+    DocumentRoot "/var/www/html/docs/site"
+    ServerName YOURDOMAIN.COM
+    ServerAlias YOURDOMAIN.COM
+
+<Directory "/var/www/html/docs/site">
+        DirectoryIndex index.php index.html
+        Order allow,deny
+        Allow from all
+</Directory>
+
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =YOURDOMAIN.COM
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+```
+
+# LetsEncrypt
+
+```
+apt install certbot python3-certbot-apache
+certbot --apache -d your_domain.com
+certbot certificates
 ```
 
