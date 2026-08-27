@@ -75,6 +75,7 @@ nav:
           - mac_ssh.md
           - png_to_svg.md
           - ext4macos.md
+          - vlc_iptv.md
 theme:
   name: material
   font:
