@@ -4,7 +4,13 @@ These are my documents and notes.
 # Install packages
 ## Redhat / DNF
 ```
-dnf install python3-pip git httpd mod_ssl mod_security httpd-tools
+dnf install -y epel-release
+dnf clean all
+dnf makecache
+dnf install wget
+wget -q -O - https://www.atomicorp.com/installers/atomic | sh
+dnf upgrade
+dnf install python3-pip git httpd mod_ssl mod_security httpd-tools -y
 ```
 ## Ubuntu
 ```
@@ -18,7 +24,7 @@ git clone https://github.com/rezizter/docs.git
 mkdir /var/www/html/docs/overrides
 ln -sf docs/mkdocs.yml mkdocs.yml
 cd docs
-python -m venv ~/.cache/venv/python
+python3 -m venv ~/.cache/venv/python
 source ~/.cache/venv/python/bin/activate
 pip install -r requirements.txt
 mkdir /opt/scripts
@@ -52,8 +58,16 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 
 # LetsEncrypt
 
+## Debian
 ```
 apt install certbot python3-certbot-apache
+certbot --apache -d your_domain.com
+certbot certificates
+```
+
+## Redhat
+```
+dnf install certbot python3-certbot-apache -y
 certbot --apache -d your_domain.com
 certbot certificates
 ```
