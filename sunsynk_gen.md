@@ -16,9 +16,7 @@ Tap on the Battery icon
 
 !!! note
      Use this formula to find a safe starting current:
-     ```
      10A = +-500W
-     ```
 
 So if you have a 5KW generator, set the value to 99A
 
