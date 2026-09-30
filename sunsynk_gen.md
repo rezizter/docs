@@ -9,9 +9,11 @@ I knew it had to be a setting as on solar, the batteries charge past 5KW.
 ## Setup
 
 Tap on the Gear Icon on the top right.
+
 ![image](./img/sunsynk_gen_2.png){: style="width:150:px"}
 
 Tap on the Battery icon
+
 ![image](./img/sunsynk_gen_3.png){: style="width:150:px"}
 
 !!! note
