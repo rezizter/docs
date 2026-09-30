@@ -18,7 +18,8 @@ Tap on the Battery icon
      Use this formula to find a safe starting current:
      10A = +-500W
 
-So if you have a 5KW generator, set the value to 99A
+!!! info
+    So if you have a 5KW generator, set the value to 99A
 
 Tap the block next to “Gen Charge” to put a tick in the block.
 The first block next to amps that was greyed out will now turn white. Tap in this block to change the value.
