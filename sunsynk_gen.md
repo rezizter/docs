@@ -27,4 +27,5 @@ Tap the block next to “Gen Charge” to put a tick in the block.
 The first block next to amps that was greyed out will now turn white. Tap in this block to change the value.
 Press the up button to increase this value.
 Click on “OK” to Apply.
+
 ![image](./img/sunsynk_gen_4.png){: style="width:150:px"}
