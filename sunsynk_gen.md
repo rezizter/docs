@@ -1,7 +1,6 @@
 # SunSynk with a generator battery capped
 ## Introduction
-I had an issue where I had a generator added to my SunSynk inverter,
-however when I ran the generator, the batteries would not charge past 2KW, instead of the full 5.5KW that the generator produced.
+I had an issue where I had a generator added to my SunSynk inverter, however when I ran the generator, the batteries would not charge past 2KW, instead of the full 5.5KW that the generator produced.
 ![image](./img/sunsynk_gen_1.png){: style="width:150:px"}
 
 I knew it had to be a setting as on solar, the batteries charge past 5KW.
