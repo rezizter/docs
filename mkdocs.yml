@@ -60,6 +60,7 @@ nav:
           - mmi.md
       - Electrical:
           - ups_speaker.md
+          - sunsynk_gen.md
       - Networking:
           - dwa_582.md
       - Physical Servers:
