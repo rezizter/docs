@@ -12,10 +12,10 @@ Open your sip application and test echo by dialing
 If this works, your freepbx installation is okay, and you can proceed with the next step.
 
 # Set NAT external address
-In Freepbx, click on "Settings" > "Asterisk SIP Settings" andthen click on "Detect Network Settings" and then click on "Submit".
+In Freepbx, click on "Settings" > "Asterisk SIP Settings" ,click on "Detect Network Settings" and then click on "Submit".
 ![image](./img/freepbx_nat1.png){: style="width:150:px"}
 
-This will update your external WAN address
+This will update your external WAN address.
 
 Click on "Apply Config".
 ![image](./img/freepbx_nat2.png){: style="width:150:px"}
