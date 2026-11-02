@@ -38,6 +38,11 @@ Now build the site
 
 # Apache config
 
+Add a config file:
+
+```
+vi /etc/httpd/conf.d/<DOMAIN>.conf
+
 ```
 <VirtualHost *:80>
     DocumentRoot "/var/www/html/docs/site"
