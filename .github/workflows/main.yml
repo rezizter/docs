@@ -21,6 +21,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: root
           privateKey: ${{ secrets.PRIVATE_KEY}}
-          port: 2222
+          port: 22
         env:
           CI: true
