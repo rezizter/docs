@@ -61,6 +61,13 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 ```
 
+## Enable and start apache
+
+```
+systemctl enable httpd
+systemctl restart httpd
+```
+
 # LetsEncrypt
 
 ## Debian
