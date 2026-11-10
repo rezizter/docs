@@ -2,8 +2,7 @@
 
 ## Bio
 
-This site contains my notes for setting up services and linux servers.
-Will expand into a blog eventually when I have more to talk about.
+This site contains my notes for setting up services, linux servers and things I tinker around with.
 
 ### Navigating this site
 
