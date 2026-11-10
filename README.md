@@ -44,6 +44,8 @@ Add a config file:
 vi /etc/httpd/conf.d/<DOMAIN>.conf
 
 ```
+Add
+```
 <VirtualHost *:80>
     DocumentRoot "/var/www/html/docs/site"
     ServerName YOURDOMAIN.COM
